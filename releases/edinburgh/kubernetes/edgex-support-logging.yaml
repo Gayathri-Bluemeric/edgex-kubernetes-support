@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 100M
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
     path: "/mnt/support-logging-volume"
 ---
@@ -23,7 +23,7 @@ spec:
       app: edgex-support-logging-volume
   storageClassName: manual
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 100M
