@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 100M
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
     path: "/mnt/mongo-volume"
 ---
@@ -23,7 +23,7 @@ spec:
       app: edgex-mongo-volume
   storageClassName: manual
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 100M
